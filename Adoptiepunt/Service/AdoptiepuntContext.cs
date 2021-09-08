@@ -25,5 +25,18 @@ namespace Adoptiepunt.Service
         public DbSet<CountryOfOrigin> CountryOfOrigins { get; set; }
         public DbSet<PersonCountryOfOrigin> PersonCountryOfOrigins { get; set; }
         public DbSet<InvitationPurpose> InvitationPurposes { get; set; }
+        public DbSet<PersonInvitationPurpose> PersonInvitationPurposes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Relation>()
+                .HasOne(r => r.Person)
+                .WithMany(p => p.Relations)
+                .HasForeignKey(r => r.ChildPersonId)
+                .OnDelete(DeleteBehavior.NoAction)
+                .IsRequired();
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

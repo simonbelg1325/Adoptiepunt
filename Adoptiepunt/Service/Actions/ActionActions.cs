@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
@@ -9,9 +8,9 @@ namespace Adoptiepunt.Service.Actions
         [Key]
         public int Id { get; set; }
         public string Description { get; set; }
-        [Required]
         public DateTime Date { get; set; }
-        public virtual ICollection<Registration> Registrations { get; set; }
+        public int RegistrationId { get; set; }
+        public virtual Registration Registration { get; set; }
 
     }
 

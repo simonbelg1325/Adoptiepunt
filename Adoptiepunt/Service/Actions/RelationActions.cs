@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
 {
@@ -7,8 +6,11 @@ namespace Adoptiepunt.Service.Actions
     {
         [Key]
         public int Id { get; set; }
-        public virtual ICollection<Person> Persons { get; set; }
-        public virtual ICollection<RelationType> RelationTypes { get; set; }
+        public int ParentPersonId { get; set; }
+        public int ChildPersonId { get; set; }
+        public virtual Person Person { get; set; }
+        public int RelationTypeId { get; set; }
+        public virtual RelationType RelationType { get; set; }
     }
 
     public class RelationActions : PersistentObjectActionsReference<AdoptiepuntContext, Relation>

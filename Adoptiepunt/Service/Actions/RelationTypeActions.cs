@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
 {
@@ -6,10 +7,8 @@ namespace Adoptiepunt.Service.Actions
     {
         [Key]
         public int Id { get; set; }
-
-        public int RelationId { get; set; }
         public string Description { get; set; }
-        public virtual Relation Relation { get; set; }
+        public virtual ICollection<Relation> Relations { get; set; }
     }
 
 
