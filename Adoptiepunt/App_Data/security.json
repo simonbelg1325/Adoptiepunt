@@ -1,0 +1,10 @@
+{
+  "Groups": {},
+  "Rights": [
+    {
+      "Id": "4a497a11-afce-4b6b-bb5a-3aa3e54a91aa",
+      "Resource": "Query/Adoptiepunt",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    }
+  ]
+}

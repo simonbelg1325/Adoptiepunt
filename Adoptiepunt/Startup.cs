@@ -10,6 +10,7 @@ using Vidyano.Service.PostgreSQL;
 
 namespace Adoptiepunt
 {
+    //@Adoptie!123
     public class Startup
     {
         public Startup(IConfiguration configuration)

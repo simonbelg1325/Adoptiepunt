@@ -5,6 +5,12 @@
       "Bindings": [
         "*"
       ]
-    }
+    },
+    "Admin": {
+      "Type": 2,
+      "Bindings": [
+        "*/Admin"
+      ] 
+    } 
   }
 }

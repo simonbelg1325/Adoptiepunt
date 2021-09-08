@@ -84,3 +84,4 @@ C:\Users\wondisi\Vidyano6\Adoptiepunt\Adoptiepunt\obj\Debug\net5.0\Adoptiepunt.p
 C:\Users\wondisi\Vidyano6\Adoptiepunt\Adoptiepunt\obj\Debug\net5.0\Adoptiepunt.genruntimeconfig.cache
 C:\Users\wondisi\Vidyano6\Adoptiepunt\Adoptiepunt\bin\Debug\net5.0\Humanizer.dll
 C:\Users\wondisi\Vidyano6\Adoptiepunt\Adoptiepunt\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\wondisi\Vidyano6\Adoptiepunt\Adoptiepunt\bin\Debug\net5.0\App_Data\cdncache.tmp
