@@ -32,7 +32,7 @@ namespace Adoptiepunt.Service
             modelBuilder.Entity<Relation>()
                 .HasOne(r => r.Person)
                 .WithMany(p => p.Relations)
-                .HasForeignKey(r => r.ChildPersonId)
+                .HasForeignKey(r => r.ParentPersonId)
                 .OnDelete(DeleteBehavior.NoAction)
                 .IsRequired();
 
