@@ -1,12 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
 {
-    public class RelationType
+    public class RelationType : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
         public string Description { get; set; }
         public virtual ICollection<Relation> Relations { get; set; }
     }

@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
 {
     public class Registration : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
-        [Required]
         public string Owner { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

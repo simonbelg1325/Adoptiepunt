@@ -1,13 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
 {
-    public class Tag
+    public class Tag : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
-        [Required]
         public string Description { get; set; }
         public virtual ICollection<RegistrationTag> RegistrationTags { get; set; }
     }

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
 {
-    public class Action
+    public class Action : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
         public int RegistrationId { get; set; }

@@ -1,13 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
 {
-    public class Category
+    public class Category : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
-        [Required]
         public string Description { get; set; }
         public virtual ICollection<PersonCategory> PersonCategories { get; set; }
 

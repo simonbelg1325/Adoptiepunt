@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Adoptiepunt.Service.Actions
+﻿namespace Adoptiepunt.Service.Actions
 {
-    public class PersonCategory
+    public class PersonCategory : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
         public int CategoryId { get; set; }
         public int PersonId { get; set; }
 

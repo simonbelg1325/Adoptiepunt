@@ -1,12 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
 {
-    public class CountryOfOrigin
+    public class CountryOfOrigin : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
         public string Name { get; set; }
         public virtual ICollection<PersonCountryOfOrigin> PersonCountryOfOrigins { get; set; }
     }

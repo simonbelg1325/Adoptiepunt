@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Adoptiepunt.Service.Actions
+﻿namespace Adoptiepunt.Service.Actions
 {
-    public class PersonCountryOfOrigin
+    public class PersonCountryOfOrigin : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
         public int PersonId { get; set; }
         public int CountryOfOriginId { get; set; }
 

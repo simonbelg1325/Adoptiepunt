@@ -1,17 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Adoptiepunt.Service.Actions
 {
-    public class Person
+    public class Person : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
-
         public bool Anonymously { get; set; }
-        [Required]
         public string FirstName { get; set; }
-        [Required]
         public string Name { get; set; }
 
         public string Email1 { get; set; }

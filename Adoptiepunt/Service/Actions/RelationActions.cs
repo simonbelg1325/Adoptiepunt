@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Adoptiepunt.Service.Actions
+﻿namespace Adoptiepunt.Service.Actions
 {
-    public class Relation
+    public class Relation : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
         public int ParentPersonId { get; set; }
         public int ChildPersonId { get; set; }
         public virtual Person Person { get; set; }
