@@ -3,9 +3,8 @@
     public class PersonCategory : EntityBase
     {
         public int CategoryId { get; set; }
-        public int PersonId { get; set; }
-
         public virtual Category Category { get; set; }
+        public int PersonId { get; set; }
         public virtual Person Person { get; set; }
     }
 

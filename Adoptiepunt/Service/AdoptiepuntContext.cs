@@ -1,5 +1,6 @@
 ﻿using Adoptiepunt.Service.Actions;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using Vidyano.Service;
 
 namespace Adoptiepunt.Service
@@ -30,18 +31,14 @@ namespace Adoptiepunt.Service
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Relation>()
-                .HasOne(r => r.Person)
-                .WithMany(p => p.Relations)
+                .HasOne(r => r.ParentPerson)
+                .WithMany(r => r.Relations)
                 .HasForeignKey(r => r.ParentPersonId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.ClientNoAction)
                 .IsRequired();
 
-            modelBuilder.Entity<Relation>()
-               .HasOne(r => r.Person)
-               .WithMany(p => p.Relations)
-               .HasForeignKey(r => r.ChildPersonId)
-               .OnDelete(DeleteBehavior.ClientSetNull)
-               .IsRequired();
+            foreach (var foreignKey in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+                foreignKey.DeleteBehavior = DeleteBehavior.ClientNoAction;
 
             base.OnModelCreating(modelBuilder);
         }

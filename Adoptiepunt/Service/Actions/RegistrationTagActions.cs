@@ -3,8 +3,8 @@
     public class RegistrationTag : EntityBase
     {
         public int RegistrationId { get; set; }
-        public int TagId { get; set; }
         public virtual Registration Registration { get; set; }
+        public int TagId { get; set; }
         public virtual Tag Tag { get; set; }
     }
 

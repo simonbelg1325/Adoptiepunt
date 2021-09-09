@@ -20,8 +20,6 @@ namespace Adoptiepunt.Service.Actions
         public virtual ICollection<PersonCategory> PersonCategories { get; set; }
         public virtual ICollection<PersonCountryOfOrigin> PersonCountryOfOrigins { get; set; }
         public virtual ICollection<PersonInvitationPurpose> PersonInvitationPurposes { get; set; }
-
-        public int RegistrationId { get; set; }
         public virtual ICollection<Registration> Registrations { get; set; }
     }
 

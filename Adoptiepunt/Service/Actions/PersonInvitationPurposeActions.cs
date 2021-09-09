@@ -3,8 +3,8 @@
     public class PersonInvitationPurpose : EntityBase
     {
         public int PersonId { get; set; }
-        public int InvitationPurposeId { get; set; }
         public virtual Person Person { get; set; }
+        public int InvitationPurposeId { get; set; }
         public virtual InvitationPurpose InvitationPurpose { get; set; }
     }
 
